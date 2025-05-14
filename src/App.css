@@ -1,0 +1,105 @@
+body {
+  background: #fff8f0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.invite-preview {
+  border: 2px solid #d0d0d0;
+  border-radius: 15px;
+  padding: 25px;
+  min-height: 600px;
+  background: linear-gradient(to bottom right, #fffbe6, #fff);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-family: 'Georgia', serif;
+}
+
+
+.invite-card {
+  /* max-width: 600px; */
+  aspect-ratio: 5 / 7; /* PDF-like ratio */
+  padding: 2rem;
+  background-color: #fefefe;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+/* This ensures that each slide occupies full screen and has smooth transition effects */
+.slide {
+  display: none; /* Default is hidden */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Active slide (when it is the current step) */
+.slide.active {
+  display: block; /* Show the current slide */
+  transform: translateX(0);
+}
+
+
+.ganesha {
+  font-size: 20px;
+  font-weight: bold;
+  color: #a52a2a;
+  margin-bottom: 15px;
+}
+
+.name {
+  font-size: 26px;
+  font-weight: bold;
+  color: #2e8b57;
+  margin-top: 10px;
+}
+
+.and-symbol {
+  font-size: 24px;
+  font-weight: bold;
+  color: #d2691e;
+  margin: 20px 0;
+}
+
+.small {
+  font-size: 14px;
+  color: #444;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+input.form-control {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+input.form-control:focus {
+  border-color: #ffa500;
+  box-shadow: 0 0 0 2px rgba(255, 165, 0, 0.3);
+}
+
+button {
+  min-width: 90px;
+}
+
+@media (max-width: 768px) {
+  .invite-preview {
+    font-size: 14px;
+    min-height: auto;
+  }
+
+  .name {
+    font-size: 20px;
+  }
+
+  .ganesha {
+    font-size: 16px;
+  }
+
+  .and-symbol {
+    font-size: 18px;
+  }
+}
