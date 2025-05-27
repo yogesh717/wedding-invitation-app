@@ -52,13 +52,7 @@ const WeddingDetailsCard = ({ onNext, onBack, showOnlyCard, formKey }) => {
     <div className="container my-5">
       <div className="row justify-content-center">
         <div className={showOnlyCard ? "col-12 d-flex justify-content-center" : "col-md-8"}>
-          <div className="card p-4 shadow invite-card" style={{
-            width: '100%',
-            minHeight: '850px',
-            border: '1px solid #ccc',
-            backgroundColor: '#fff',
-            fontFamily: "'Georgia', serif"
-          }}>
+        <div className="card p-4 shadow invite-card" style={cardStyle}>
             <div className="text-center fs-4 text-danger mb-3">{localData.ganesha}</div>
             <p className="text-center fs-5">{localData.invitationLine}</p>
 
@@ -108,5 +102,20 @@ const WeddingDetailsCard = ({ onNext, onBack, showOnlyCard, formKey }) => {
     </div>
   );
 };
+
+
+
+const cardStyle = {
+  width: '100%',  // Full width to make it responsive
+  maxWidth: '600px',  // Limiting the max width to 600px
+  minHeight: '850px',  // Ensuring a consistent height
+  border: '1px solid #ccc',
+  backgroundColor: '#fff',
+  fontFamily: "'Georgia', serif",
+  margin: 'auto',  // Center the card horizontally
+  borderRadius: '15px',  // Rounded corners for a softer look
+  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',  // Light shadow for depth
+};
+
 
 export default WeddingDetailsCard;

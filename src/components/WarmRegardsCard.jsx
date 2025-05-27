@@ -41,13 +41,27 @@ const WarmRegardsCard = ({ onBack, onNext, showOnlyCard, formKey }) => {
     message: 'Message',
    };
  
+     // Custom preview card style
+  const previewCardStyle = {
+    width: '600px',
+    height: '850px',
+    border: '1px solid #ccc',
+    borderRadius: '20px',
+    padding: '40px',
+    backgroundColor: '#fff8dc',
+    textAlign: 'center',
+    fontFamily: "'Georgia', serif",
+    boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+    fontSize: '18px'
+  };
 
   return (
     <div className="container my-4">
-      <div className="row">
+      <div className="row justify-content-center">
         {/* Left: Preview */}
-        <div className="col-md-6" >
-          <div className="card p-4 invite-preview text-center">
+        <div className={showOnlyCard ? "col-12 d-flex justify-content-center" : "col-md-6 d-flex justify-content-center"}>
+          <div className="shadow" style={previewCardStyle}>
+          {/* <div className="card p-4 invite-preview text-center"> */}
             <h4 className="greeting">{localData.greeting}</h4>
             <h5 className="family">{localData.family1}</h5>
             <h5 className="family">{localData.family2}</h5>

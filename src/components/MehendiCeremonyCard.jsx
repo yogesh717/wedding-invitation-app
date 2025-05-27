@@ -44,10 +44,10 @@ const MehendiCeremonyCard = ({ onBack, onNext, showOnlyCard, formKey }) => {
 
   return (
     <div className="container my-4">
-      <div className="row">
+         <div className="row justify-content-center">
         {/* Left: Preview Card */}
-        <div className="col-md-6">
-          <div className="card p-4 invite-preview text-center">
+        <div className={showOnlyCard ? "col-12 d-flex justify-content-center" : "col-md-6 d-flex justify-content-center"}>
+        <div className="card p-4 shadow invite-preview text-center" style={previewCardStyle}>
             <h3 className="title">{localData.title}</h3>
             <h5 className="subtitle">{localData.subtitle}</h5>
             <h1 className="day">{localData.day}</h1>
@@ -83,5 +83,19 @@ const MehendiCeremonyCard = ({ onBack, onNext, showOnlyCard, formKey }) => {
     </div>
   );
 };
+
+
+const previewCardStyle = {
+  width: '100%',  // Full width for responsiveness
+  maxWidth: '600px',  // Max width to prevent excessive stretching
+  minHeight: '850px',  // Consistent height for all event cards
+  border: '1px solid #ccc',
+  backgroundColor: '#fff',
+  fontFamily: "'Georgia', serif",
+  margin: 'auto',  // Center horizontally
+  borderRadius: '15px',  // Rounded corners
+  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',  // Light shadow for depth
+};
+
 
 export default MehendiCeremonyCard;

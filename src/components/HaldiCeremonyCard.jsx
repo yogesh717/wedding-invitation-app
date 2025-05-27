@@ -46,14 +46,28 @@ const HaldiCeremonyCard = ({  onBack, onNext, showOnlyCard, formKey  }) => {
     location: 'Location'
   };
 
+
+  // const isFormValid = Object.values(localData).every((val) => val && val.trim() !== '');
+
+  const previewCardStyle = {
+    width: '600px',
+    height: '850px',
+    border: '1px solid #ccc',
+    borderRadius: '20px',
+    padding: '40px',
+    backgroundColor: '#fff8dc',
+    textAlign: 'center',
+    fontFamily: "'Georgia', serif"
+  };
   
 
   return (
     <div className="container my-4">
-      <div className="row">
+           <div className="row justify-content-center">
         {/* Left: Preview */}
-        <div className="col-md-6">
-          <div className="card p-4 invite-preview text-center">
+        <div className={showOnlyCard ? "col-12 d-flex justify-content-center" : "col-md-6 d-flex justify-content-center"}>
+          <div className="shadow" style={previewCardStyle}>
+          {/* <div className="card p-4 invite-preview text-center"> */}
             <h3 className="title">{localData.title}</h3>
             <h5 className="subtitle">{localData.subtitle}</h5>
             <h1 className="day">{localData.day}</h1>

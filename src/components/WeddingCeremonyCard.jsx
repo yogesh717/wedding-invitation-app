@@ -47,12 +47,27 @@ const WeddingCeremonyCard = ({ onBack, onNext, showOnlyCard, formKey }) => {
   };
 
 
+    // Custom preview card style
+    const previewCardStyle = {
+      width: '600px',
+      height: '850px',
+      border: '1px solid #ccc',
+      borderRadius: '20px',
+      padding: '40px',
+      backgroundColor: '#fff8dc',
+      textAlign: 'center',
+      fontFamily: "'Georgia', serif",
+      boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+      fontSize: '18px'
+    };
+
   return (
     <div className="container my-4">
-      <div className="row">
-        {/* Left: Preview Card */}
-        <div className="col-md-6">
-          <div className="card p-4 invite-preview text-center">
+      <div className="row justify-content-center">
+        {/* Left: Preview */}
+        <div className={showOnlyCard ? "col-12 d-flex justify-content-center" : "col-md-6 d-flex justify-content-center"}>
+          <div className="shadow" style={previewCardStyle}>
+          {/* <div className="card p-4 invite-preview text-center"> */}
             <h3 className="title">{localData.title}</h3>
             <h5 className="subtitle">{localData.subtitle}</h5>
             <h1 className="day">{localData.day}</h1>

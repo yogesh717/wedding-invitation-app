@@ -46,25 +46,26 @@ const EngagementSangeetCard = ({ onBack, onNext, showOnlyCard, formKey }) => {
     location: 'Location'
   };
 
+  // const isFormValid = Object.values(localData).every((val) => val && val.trim() !== '');
+
+  const previewCardStyle = {
+    width: '600px',
+    height: '850px',
+    border: '1px solid #ccc',
+    borderRadius: '20px',
+    padding: '40px',
+    backgroundColor: '#fffaf0',
+    textAlign: 'center',
+    fontFamily: "'Georgia', serif"
+  };
+
 
   return (
     <div className="container my-5">
       <div className="row justify-content-center">
         {/* Preview Card */}
         <div className={showOnlyCard ? "col-12 d-flex justify-content-center" : "col-md-6 d-flex justify-content-center"}>
-          <div
-            className="shadow"
-            style={{
-              width: '600px',
-              height: '850px',
-              border: '1px solid #ccc',
-              borderRadius: '20px',
-              padding: '40px',
-              backgroundColor: '#fffaf0',
-              textAlign: 'center',
-              fontFamily: "'Georgia', serif"
-            }}
-          >
+        <div className="shadow" style={previewCardStyle}>
             <h2 className="text-uppercase mb-3" style={{ color: '#b22222' }}>{localData.title}</h2>
             <h4 className="text-muted mb-5">{localData.subtitle}</h4>
             <div style={{ fontSize: '72px', fontWeight: 'bold', color: '#d2691e' }}>{localData.day}</div>

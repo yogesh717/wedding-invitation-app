@@ -90,9 +90,11 @@ const WeddingCard = ({ onNext, showOnlyCard, formKey }) => {
   );
 };
 
+
 const cardStyle = {
-  width: '600px',
-  height: '850px',
+  width: '100%',  // Full width to make it responsive
+  maxWidth: '600px',  // Limiting the max width
+  height: '850px',  // Fixed height to ensure uniformity
   border: '2px solid #ccc',
   borderRadius: '20px',
   background: 'linear-gradient(to bottom, #e0f7fa, #fff)',
@@ -101,6 +103,7 @@ const cardStyle = {
   textAlign: 'center',
   position: 'relative',
   boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+  margin: 'auto',  // Centering the card
 };
 
 const emojiStyle = {
